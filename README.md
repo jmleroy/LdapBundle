@@ -3,9 +3,9 @@
 LdapBundle provides LDAP authentication without using Apache's `mod_ldap`. The bundle instead relies on PHP's [LDAP extension](http://php.net/manual/en/book.ldap.php) along with a form to authenticate users. LdapBundle can also be used for authorization by retrieving the user's roles defined in LDAP.
 
 ## Credits 
-This Bundle was originally created by BorisMorel. Since this bundle is used frequently in almost all our projects, and since the original bundle was not being maintained by anyone we have tried to add 
-our own mods to the project. Anyone is free to use this bundle and modify it as they please. I will try to keep this bundle upto date, but with my busy schedule that may not the case all the time.
-if you do manage to update the project, please submit a pull request and I would be happy to examine and merge it. 
+This Bundle was originally created by Boris Morel and then forked by Subramanya Vajiraya. Since this bundle was discontinued by its original maintainer and probably abandoned by its last forker (last update was from 2017), and since I needed to fix it, I both submitted a pull request *and* forked it myself.
+Anyone is free to use this bundle and modify it as they please. I will try to keep this bundle up to date.
+If you do manage to update the project, please submit a pull request and I would be happy to examine and merge it. 
 
 ## Install
 
@@ -26,7 +26,7 @@ Add LdapBundle in your project's `composer.json`
 ```json
 {
     "require": {
-        "svajiraya/ldap-bundle": "dev-master"
+        "jmleroy/ldap-bundle": "dev-master"
     }
 }
 ```
@@ -35,7 +35,7 @@ or
 
 ``` shell
 
-composer require svajiraya/ldap-bundle
+composer require jmleroy/ldap-bundle
 
 ```
 
@@ -136,6 +136,14 @@ imag_ldap:
 
 imag_ldap:
   resource: "@IMAGLdapBundle/Resources/config/routing.yml"
+```
+
+### Implement Login
+
+Just add a hidden tag to the login form with id set as `ldap_authenticate`.
+
+``` html
+<input type="hidden" name="_csrf_token" value="{{ csrf_token('ldap_authenticate') }}">
 ```
 
 ### Implement Logout
