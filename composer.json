@@ -1,19 +1,50 @@
 {
-    "name": "svajiraya/ldap-bundle",
+    "name": "jmleroy/ldap-bundle",
     "description": "LDAP Bundle for Symfony 3 (backward compatible)",
-    "homepage": "http://github.com/svajiraya/LdapBundle",
+    "homepage": "http://github.com/jmleroy/LdapBundle",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Jean-Marc Leroy",
+            "role": "Developer",
+            "homepage": "https://github.com/jmleroy"
+        },
         {
             "name": "Subramanya Vajiraya",
             "role": "Developer",
             "homepage": "https://github.com/svajiraya"
+        },
+        {
+            "name": "Boris Morel",
+            "email": "boris.morel@imag.fr",
+            "role": "Developer",
+            "homepage" : "https://github.com/BorisMorel"
+        },
+        {
+            "name": "Juti Noppornpitak",
+            "email": "jutin@nationalfibre.net",
+            "role": "Fork Maintainer",
+            "homepage": "https://github.com/instaclick"
+        },
+        {
+            "name": "John Kary",
+            "email": "john@johnkary.net",
+            "role": "Fork Maintainer",
+            "homepage": "https://github.com/johnkary"
+        },
+        {
+            "name": "Shiroyuki",
+            "role": "Fork Maintainer",
+            "homepage": "https://github.com/shiroyuki"
         }
     ],
+    "support": {
+        "irc": "irc://irc.freenode.org/symfony-fr"
+    },
     "require": {
         "php": ">=5.3.3",
         "ext-ldap": "*",
-        "symfony/symfony": ">2.3"
+        "symfony/symfony": ">2.6"
     },
     "autoload": {
         "psr-0": { "IMAG\\LdapBundle": "" }
